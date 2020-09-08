@@ -2,6 +2,7 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <p>我是小哥哥  小姐姐网恋吗？</p>
   </div>
 </template>
 
