@@ -1,8 +1,12 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <p>我是小哥哥  小姐姐网恋吗？</p>
+    <HelloWorld :msg="msg" :content="content" :flag="flag" :res="res"/>
+    <p>
+      <input type="text" v-model="res">
+    </p>
+    <button @click="alerts">点击弹框</button>
+    卧槽
   </div>
 </template>
 
@@ -11,8 +15,21 @@ import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
+  data(){
+    return{
+      msg:"小姐姐 真好看",
+      flag:false,
+      res:"",
+      content:"卧槽 我还是个孩子啊 就这样对我？？？"
+    }
+  },
   components: {
     HelloWorld
+  },
+  methods:{
+    alerts(){
+       this.flag=!this.flag;
+    }
   }
 }
 </script>
